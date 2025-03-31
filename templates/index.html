@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Text Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>Upload an Image or PDF for Text Extraction</h1>
+
+    
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="file">Select a file (PNG, JPG, JPEG, PDF):</label>
+            <input type="file" id="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <h2>Extracted Text</h2>
+        <pre id="extractedText"></pre>
+
+        <div id="downloadLinks" style="display: none;">
+            <a id="downloadDocx" href="#" target="_blank">Download DOCX</a>
+            <a id="downloadPdf" href="#" target="_blank">Download PDF</a>
+        </div>
+    </div> -->
+    <header>
+        <h1>PAGE WHISPER</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    
+    <section class="hero-section">
+        <div>
+            <h2>Extract Text from PDFs & Images</h2>
+            <p>Upload your PDF or Image and get the text extracted effortlessly!</p>
+        </div>
+    </section>
+    
+    <div class="main-container">
+        <div class="form-container">
+            <h3>Upload Your File (PNG, JPG, JPEG, PDF)</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="file" name="file" required />
+                <button type="submit">Upload</button>
+            </form>
+            <div id="processingMessage" class="processing-message" style="display: none;">Processing...</div>
+        </div>
+    
+        <div class="download-links">
+            <a href="" id="downloadDocx">Download DOCX</a>
+            <a href="" id="downloadPdf">Download PDF</a>
+        </div>
+    </div>
+    <div id="textPreviewSection" class="text-preview-section" style="display: none;">
+        <h3>Extracted Text Preview</h3>
+        <div id="textPreview" class="text-preview"></div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Futuristic PDF Extraction. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>

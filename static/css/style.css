@@ -1,0 +1,281 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0;  /* Light text color */
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Futuristic gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #00d2ff; /* Neon accent on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+    height: 50vh; /* Reduced height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem; /* Slightly smaller font */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1rem; /* Adjusted size */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Main Content Wrapper */
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Section */
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: -100px auto 40px auto; /* Negative margin to bring the form up */
+}
+
+.form-container h3 {
+    color: #00d2ff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+input[type="file"], button {
+    background-color: #3a7bd5;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover, button:hover {
+    background-color: #00d2ff;
+    transform: scale(1.05);  /* Slight zoom effect */
+}
+
+input[type="file"] {
+    color: transparent;
+    cursor: pointer;
+}
+
+/* Download Links */
+.download-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+.processing-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #00d2ff;
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Add a spinner or any loading indicator if needed */
+.processing-message::after {
+    content: '...';
+    animation: dot-blink 1s infinite steps(1, end);
+}
+
+@keyframes dot-blink {
+    0%, 100% {
+        content: '...';
+    }
+    50% {
+        content: '..';
+    }
+}
+
+.download-links a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: 2px solid #00d2ff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.download-links a:hover {
+    background-color: #00d2ff;
+    color: #121212;
+    transform: scale(1.05);  /* Zoom in on hover */
+}
+
+/* Text Preview Section */
+.text-preview-section {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-preview-section h3 {
+    color: #00d2ff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-preview {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Extracted Text Styling */
+#extractedText {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 350px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00d2ff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .form-container {
+        padding: 20px;
+        margin: -60px auto 40px auto; /* Adjusted negative margin */
+    }
+
+    .download-links {
+        flex-direction: column;
+    }
+
+    .text-preview-section {
+        padding: 20px;
+    }
+
+    .text-preview {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 40vh; /* Smaller height for smaller screens */
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-preview {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        margin: -50px auto 40px auto; /* Adjusted negative margin for very small screens */
+    }
+}
