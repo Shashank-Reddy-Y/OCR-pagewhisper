@@ -97,10 +97,12 @@ page-whisper/
 ├── requirements.txt            # Python dependencies
 ├── templates/
 │   └── index.html              # Main HTML template
+    --- about.html
 │
 └── static/
     ├── css/
     │   └── style.css           # Custom styles
+        --- style_about.css
     └── js/
         └── script.js           # JavaScript for frontend functionality
 ```
