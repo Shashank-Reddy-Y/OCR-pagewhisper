@@ -9,7 +9,6 @@ import os
 import time
 from flask_cors import CORS
 
-# After initializing your Flask app
 def delete_from_gcs(bucket_name, file_name):
     """Delete a file from Google Cloud Storage."""
     storage_client = storage.Client()
@@ -20,7 +19,7 @@ def delete_from_gcs(bucket_name, file_name):
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 CORS(app)
-GCS_BUCKET_NAME = "vision-api-bucket-123"
+GCS_BUCKET_NAME = "your gcs bucket name"
 
 def detect_text_from_image(image_path):
     client = vision.ImageAnnotatorClient()
@@ -98,12 +97,12 @@ def detect_text_from_pdf(gcs_uri):
     )
 
     operation = client.async_batch_annotate_files(requests=[async_request])
-    operation.result(timeout=300)  # Wait for processing to complete
+    operation.result(timeout=300)  
 
     # Fetch the output from GCS
     storage_client = storage.Client()
     bucket_name = gcs_uri.split("/")[2]  # Extract bucket name
-    prefix = gcs_uri.split("/")[-1] + "-output/"  # Extract output folder prefix
+    prefix = gcs_uri.split("/")[-1] + "-output/"  
     bucket = storage_client.bucket(bucket_name)
 
     text = ""
@@ -114,18 +113,14 @@ def detect_text_from_pdf(gcs_uri):
             json_files.append(blob)  # Store for deletion
             json_data = json.loads(blob.download_as_text())
 
-            # Check if "responses" key exists
             if "responses" not in json_data:
                 print(f"Warning: 'responses' key missing in {blob.name} {json_data}")
-                continue  # Skip this JSON file
+                continue 
 
             for response in json_data.get("responses", []):
                 if "fullTextAnnotation" in response:
                     text += response["fullTextAnnotation"]["text"] + "\n\n"
 
-            # for response in json_data["responses"]:
-            #     if "fullTextAnnotation" in response:
-            #         text += response["fullTextAnnotation"]["text"] + "\n\n"
 
     # Delete JSON files after processing
     for blob in json_files:
@@ -154,10 +149,10 @@ def save_as_pdf(text, output_path):
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
     
-    pdf.add_font("DejaVu", "", "/Users/apple/Documents/fonts/DejaVuSans.ttf", uni=True)  # Ensure correct font
+    pdf.add_font("DejaVu", "", "path-to-your-dejavu ttf file", uni=True) 
     pdf.set_font("DejaVu", size=12)
     
-    pdf.multi_cell(0, 10, text.encode("utf-8").decode("utf-8"))  # Fix encoding issue
+    pdf.multi_cell(0, 10, text.encode("utf-8").decode("utf-8")) 
     pdf.output(output_path, "F")
 
 
