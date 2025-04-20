@@ -159,5 +159,4 @@ website demo image
 ### Notes:
 AI tool like chatgpt are used for this project. The Idea was mine. Ai tools are used only for the coding part.
 
-- Update `https://github.com/Shashank-Reddy-Y/OCR-pagewhisper.git` with the actual URL to your repository.
-- Include any additional instructions or features specific to your project.
+The google vision api has both a free trial and a paid one so, please refer to the plans before using it in your project.
