@@ -10,7 +10,7 @@ import time
 from flask_cors import CORS
 
 def delete_from_gcs(bucket_name, file_name):
-    """Delete a file from Google Cloud Storage."""
+    """Delete a tempararily stored file from Google Cloud Storage."""
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(file_name)
@@ -19,8 +19,9 @@ def delete_from_gcs(bucket_name, file_name):
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 CORS(app)
-GCS_BUCKET_NAME = "your gcs bucket name"
+GCS_BUCKET_NAME = "your gcs bucket name" #change this to your gcs bucket name 
 
+"""chatgpt is used generate and help with code"""
 def detect_text_from_image(image_path):
     client = vision.ImageAnnotatorClient()
     with io.open(image_path, 'rb') as image_file:
@@ -130,7 +131,7 @@ def detect_text_from_pdf(gcs_uri):
 
     return text 
 
-
+"""uploads file(pdfs) into GCS for extraction of text """
 def upload_to_gcs(bucket_name, file_path):
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
@@ -155,7 +156,7 @@ def save_as_pdf(text, output_path):
     pdf.multi_cell(0, 10, text.encode("utf-8").decode("utf-8")) 
     pdf.output(output_path, "F")
 
-
+""" file or image uploading route """
 @app.route("/upload", methods=["POST"])
 def upload_file():
     if 'file' not in request.files:
