@@ -9,7 +9,6 @@
 - **File Upload**: Users can upload PNG, JPG, JPEG, and PDF files.
 - **Download**: Extracted text can be downloaded as DOCX or PDF.
 - **Text Preview**: Preview extracted text directly on the website.
-- **Processing Indicator**: Displays a "Processing..." message while the file is being processed.
 - **Responsive**: Designed for both desktop and mobile users.
 
 ## Tech Stack
@@ -31,7 +30,7 @@ To run this project locally or deploy it, you need the following:
 - Python 3.7 or above
 - Flask
 - Google Cloud SDK
-- Required Python libraries (listed below)
+- Required Python libraries (listed in the requirements.txt)
   
 ## Setup Instructions
 
