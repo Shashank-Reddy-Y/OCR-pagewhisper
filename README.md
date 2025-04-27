@@ -138,6 +138,7 @@ page-whisper/
 
 - **"File not found" error**: This can occur if the file is not uploaded correctly or the server has been restarted. Ensure that the file exists in the `uploads` directory.
 - **Vision API errors**: If you encounter an issue with the Vision API, check your Google Cloud account's billing status and quota.
+- **Make sure you connect to the Internet before running**
 
 ## Contributing
 
