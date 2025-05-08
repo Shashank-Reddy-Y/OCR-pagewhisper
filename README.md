@@ -153,6 +153,19 @@ website demo image
 <img width="1329" alt="Screenshot 2025-03-31 at 6 27 26 PM" src="https://github.com/user-attachments/assets/8d3fb3b3-f491-4667-8e89-a5e78db9acb9" />
 
 
+**OUTPUTS**
+| **Input Image-1** | **Output (pdf format)** |
+|-------------------|-------------------------|
+| ![Input1](https://github.com/user-attachments/assets/d307c024-f9b7-4d87-a8b6-2cc54db15d6f) | ![Output1](https://github.com/user-attachments/assets/0b600df2-d020-4b81-904a-17a01f0b1a74) |
+
+| **Input Image-2** | **Output** |
+|-------------------|------------|
+| ![Input2](https://github.com/user-attachments/assets/14b8a7ad-b85b-4dc8-b7d7-e3aad4a34e4b) | ![Output2](https://github.com/user-attachments/assets/93a64954-e4a7-41f2-8153-0d40e0ff941c)  <img width="779" alt="Screenshot 2025-05-08 at 1 58 07 PM" src="https://github.com/user-attachments/assets/aeb2df3b-3995-4eb6-9396-3cf0fe66f8f6" />
+|
+
+
+
+
 ---
 
 
