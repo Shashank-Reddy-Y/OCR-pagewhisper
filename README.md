@@ -151,7 +151,7 @@ website demo image
 <img width="1338" alt="Screenshot 2025-03-31 at 6 27 10 PM" src="https://github.com/user-attachments/assets/5be75675-8ed7-4dbc-b0ef-75464f7a6c7e" />
 
 <img width="1329" alt="Screenshot 2025-03-31 at 6 27 26 PM" src="https://github.com/user-attachments/assets/8d3fb3b3-f491-4667-8e89-a5e78db9acb9" />
-
+<img width="1217" alt="Screenshot 2025-05-08 at 1 49 16 PM" src="https://github.com/user-attachments/assets/ad711148-531c-4152-bea6-272c26524eed" /><br><br>
 
 **OUTPUTS**
 | **Input Image-1** | **Output (pdf format)** |
